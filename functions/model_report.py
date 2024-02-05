@@ -13,7 +13,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 def machine_traing_project(loja:str, parametro:str):
     start = time.time()
-    with open(f".\\tabelas_casting\\{loja}_{parametro}.pkl",'rb') as fi:
+    with open(f"./tabelas_casting/{loja}_{parametro}.pkl",'rb') as fi:
         df = pkl.load(fi)
 
     y = df['VUF_VLRBRUTOVENDA']
@@ -143,12 +143,12 @@ def machine_traing_project(loja:str, parametro:str):
 
     time.sleep(3)
     print(f'salvando os hiperparâmetros do predict_model {loja}_{parametro}')
-    with open(f'.\\files\\best_parameters\\{loja}_{parametro}_parameters.json', 'w') as f:
+    with open(f'./files/best_parameters/{loja}_{parametro}_parameters.json', 'w') as f:
         json.dump(document, f)
 
     time.sleep(3)
     print(f'Salvando o predict_model treinado para {loja}_{parametro}\n \n \n')
-    with open(f'.\\pages\\skmodelos\\predict_pipe_{loja}_{parametro}.pkl','wb') as f:
+    with open(f'./pages/skmodelos/predict_pipe_{loja}_{parametro}.pkl','wb') as f:
         pkl.dump(predict_pipe, f)
 
     time.sleep(3)
