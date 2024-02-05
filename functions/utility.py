@@ -46,11 +46,11 @@ min_samples_leaf = [1, 2]
 bootstrap = [True, False]
 
 def gerar_df(LOJA,CLASS):
-    caminho_arquivo = f".\\tabelas_casting\\{LOJA}_{CLASS}.pkl"
+    caminho_arquivo = f"./tabelas_casting/{LOJA}_{CLASS}.pkl"
     return pd.read_pickle(caminho_arquivo)
 
 def gerar_store_list():
-    with open('.\\tabelas_casting\\lojas.json', 'r') as f:
+    with open('./tabelas_casting/lojas.json', 'r') as f:
         names = json.load(f)
     return names
 
@@ -74,7 +74,7 @@ def report(loja:str,
            mape_mean,
            mape_std,
            tempo):
-    with open(f'.\\files\\reports\\relatório_de_{loja}_{parametro}_{dt.datetime.today().strftime("%d-%m-%Y")}.txt', 'w', encoding='utf-8') as arquivo:
+    with open(f'./files/reports/relatório_de_{loja}_{parametro}_{dt.datetime.today().strftime("%d-%m-%Y")}.txt', 'w', encoding='utf-8') as arquivo:
         arquivo.write(f'Atualização do modelo preditivo de vendas\n \n \
         Loja: {loja} \n\
         Parâmetro: {parametro} \n')
@@ -95,6 +95,6 @@ def report(loja:str,
         tempo de processamento: {tempo} minutos')
         
 def get_report(loja:str, classe:str):
-    with open(f'.\\files\\best_parameters\\{loja}_{classe}_parameter.json') as file:
+    with open(f'./files/best_parameters/{loja}_{classe}_parameter.json') as file:
         report = json.load(file)
     return report
