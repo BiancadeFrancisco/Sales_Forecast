@@ -1,0 +1,43 @@
+Atualização do modelo preditivo de vendas
+ 
+         Loja: DB063 
+        Parâmetro: PRO 
+Parâmetros mais efetivos: 
+ 
+         n_estimators = 60
+         min_samples_split = 2 
+         min_samples_leaf = 1 
+         max_depth = 10 
+         bootstrap = True 
+ 
+        Valores dos foldes do cross validation: 
+                          Scores
+0  0.778095
+1  0.778095
+2  0.778095
+3  0.778095
+4  0.778095
+5  0.778095
+6  0.778095
+7  0.778095
+8  0.778095
+9  0.778095 
+ 
+        Estatísticas descritivas das métricas dos folders: 
+                                  Scores
+count  1.000000e+01
+mean   7.780948e-01
+std    1.170278e-16
+min    7.780948e-01
+25%    7.780948e-01
+50%    7.780948e-01
+75%    7.780948e-01
+max    7.780948e-01
+ 
+         As métricas levantadas foram: 
+     mae: ('média', 1383.1758597286841, '/ desvio padrão', 26.854915036893196), 
+    mse: ('média', 4409318.759820566, '/ desvio padrão', 216932.86979126727) 
+    r-quadrado: ('média', 0.7743683831851997, '/ desvio padrão', 0.021235080654076716) 
+    wmape: ('média', 0.2986347012671625, '/ desvio padrão', 0.005790685649894899) 
+ 
+     tempo de processamento: 0.6 minutos

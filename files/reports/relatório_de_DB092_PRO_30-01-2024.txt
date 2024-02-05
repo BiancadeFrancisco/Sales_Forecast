@@ -1,0 +1,26 @@
+Atualização do modelo preditivo de vendas
+ 
+         Loja: DB092 
+        Parâmetro: PRO 
+Parâmetros mais efetivos: 
+ 
+         n_estimators = 60
+         min_samples_split = 5 
+         min_samples_leaf = 2 
+         max_depth = None 
+         bootstrap = True 
+ 
+        Valores dos foldes do cross validation: 
+                     [0.6587018370447424, 0.6615230222536475, 0.6569179983783918, 0.654694920946247, 0.6596527292651537, 0.6599326027492255, 0.6539671323878454, 0.6547074947279097, 0.6570036706110655, 0.6586803655835478] 
+ 
+         Estatísticas descritivas das métricas dos folders: 
+                     {'count': 10.0, 'mean': 0.6575781773947778, 'std': 0.002543965455034276, 'min': 0.6539671323878454, '25%': 0.6552601206405302, '50%': 0.6578420180973066, '75%': 0.6594150062100509, 'max': 0.6615230222536475}
+ 
+         As métricas levantadas foram: 
+         mae: ('média', 284.4194022214942, '/ desvio padrão', 4.074497316814868), 
+         mse: ('média', 331002.3516633766, '/ desvio padrão', 18795.684215651832) 
+        r-quadrado: ('média', 0.662469575958787, '/ desvio padrão', 0.00634259323863379) 
+        wmape: ('média', 0.4574680692663028, '/ desvio padrão', 0.005557137203590024) 
+         mape: ('média', 0.7417534511975182, '/ desvio padrão', 0.007254383754300502)
+ 
+         tempo de processamento: 519.0273562471072 minutos

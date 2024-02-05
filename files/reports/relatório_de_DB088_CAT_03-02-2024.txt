@@ -1,0 +1,23 @@
+Atualização do modelo preditivo de vendas
+ 
+         Loja: DB088 
+        Parâmetro: CAT 
+Parâmetros mais efetivos: 
+ 
+         n_estimators = 40
+         min_samples_split = 5 
+         min_samples_leaf = 2 
+         max_depth = None 
+         bootstrap = True 
+ 
+        Estatísticas descritivas das métricas dos folders: 
+                     {'count': 10.0, 'mean': 0.6143963305726838, 'std': 0.12961247139549711, 'min': 0.39649543580755997, '25%': 0.5097575993750715, '50%': 0.6680393992607593, '75%': 0.7071227950308574, 'max': 0.7797341238394053}
+ 
+         As métricas levantadas foram: 
+         mae: ('média', 4418.976337144864, '/ desvio padrão', 268.5287285178355), 
+         mse: ('média', 49922656.341568, '/ desvio padrão', 9556934.88708783) 
+        r-quadrado: ('média', 0.6050330739390594, '/ desvio padrão', 0.03438905557259352) 
+        wmape: ('média', 0.231709416808076, '/ desvio padrão', 0.012151373623323239) 
+         mape: ('média', 1.3140657837653966, '/ desvio padrão', 0.24018063294084843)
+ 
+         tempo de processamento: 0.190610675017039 minutos

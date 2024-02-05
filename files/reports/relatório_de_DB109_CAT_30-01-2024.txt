@@ -1,0 +1,26 @@
+Atualização do modelo preditivo de vendas
+ 
+         Loja: DB109 
+        Parâmetro: CAT 
+Parâmetros mais efetivos: 
+ 
+         n_estimators = 60
+         min_samples_split = 5 
+         min_samples_leaf = 2 
+         max_depth = 10 
+         bootstrap = True 
+ 
+        Valores dos foldes do cross validation: 
+                     [0.8662157388000196, 0.866700583552371, 0.8742156360310321, 0.8624689838109942, 0.870830226413559, 0.8584986565922754, 0.859426690299086, 0.8644933453283734, 0.8570515553292346, 0.869811965579245] 
+ 
+         Estatísticas descritivas das métricas dos folders: 
+                     {'count': 10.0, 'mean': 0.8649713381736189, 'std': 0.0056726052430194455, 'min': 0.8570515553292346, '25%': 0.8601872636770631, '50%': 0.8653545420641965, '75%': 0.8690341200725265, 'max': 0.8742156360310321}
+ 
+         As métricas levantadas foram: 
+         mae: ('média', 75620.0897322181, '/ desvio padrão', 7320.085753628903), 
+         mse: ('média', 21604323678.149372, '/ desvio padrão', 6137864777.553535) 
+        r-quadrado: ('média', 0.8491150285304286, '/ desvio padrão', 0.020390693508739982) 
+        wmape: ('média', 0.21269556868497258, '/ desvio padrão', 0.011788931888717475) 
+         mape: ('média', 0.38619192554014203, '/ desvio padrão', 0.07292254211925882)
+ 
+         tempo de processamento: 0.49242777029673257 minutos
