@@ -121,7 +121,7 @@ utilsforecast==0.0.23
 validators==0.22.0
 watchdog==3.0.0
 wcwidth==0.2.12
-webbrowser==0.0.0
+#webbrowser==0.0.0 #verificar versão
 Werkzeug==3.0.1
 widgetsnbextension==4.0.9
 window-ops==0.0.14
