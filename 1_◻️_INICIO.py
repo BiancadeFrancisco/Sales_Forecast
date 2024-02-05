@@ -18,7 +18,7 @@ st.write("\n\n")
 btn = st.button("Acesse o site oficial")
 
 if btn:
-    webbrowser.open_new_tab("https://www.cstng.com/pt-pt/")
+    webbrowser.open_new_tab("https:\\www.cstng.com\pt-pt\")
 
 # descrição projeto  #
 
