@@ -63,7 +63,7 @@ except:
 
 try:
     with open(
-        f".\\pages\\skmodelos\\predict_pipe_{LOJA}_{classe}.pkl", "rb"
+        f"./pages/skmodelos/predict_pipe_{LOJA}_{classe}.pkl", "rb"
     ) as MF:  # <- corrigir
         model = pkl.load(MF)
 except:
@@ -84,7 +84,7 @@ if st.sidebar.button("Prever"):
         )
 
         with open(
-            f".\\files\\best_parameters\\{LOJA}_{classe}_parameters.json"
+            f"./files/best_parameters/{LOJA}_{classe}_parameters.json"
         ) as file:
             relatorio = json.load(file)
 
