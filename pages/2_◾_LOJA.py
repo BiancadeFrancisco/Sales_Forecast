@@ -62,7 +62,7 @@ except:
 
 try:
     with open(
-        f".\\pages\\skmodelos\\predict_pipe_{LOJA}_{classe}.pkl", "rb"
+        f"./pages/skmodelos/predict_pipe_{LOJA}_{classe}.pkl", "rb"
     ) as MF:  # <- corrigir
         model = pkl.load(MF)
 except:
