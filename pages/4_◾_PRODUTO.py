@@ -63,7 +63,7 @@ except:
     st.subheader('A loja não possue base dados', divider='red')
 
 try:
-    with open(f".\\pages\\skmodelos\\predict_pipe_{LOJA}_{classe}.pkl", "rb") as MF: #<- corrigir
+    with open(f"./pages/skmodelos/predict_pipe_{LOJA}_{classe}.pkl", "rb") as MF: #<- corrigir
         model = pkl.load(MF)
 except:
     st.subheader('A loja selecionada não possue modelo treinado',divider='red')
@@ -78,7 +78,7 @@ if st.sidebar.button("Prever"):
         predict_forecasting_df = pd.DataFrame(dados)
         st.line_chart(predict_forecasting_df, x="Data", y="Valor de venda",)
         
-        with open(f'.\\files\\best_parameters\\{LOJA}_{classe}_parameters.json') as file:
+        with open(f'./files/best_parameters/{LOJA}_{classe}_parameters.json') as file:
             relatorio = json.load(file)
             
         st.metric("Precisão", value=f'{relatorio["wmape"]["mean"]:.2}')
