@@ -15,10 +15,10 @@ st.write("\n\n")
 
 # site empresa #
 
-btn = st.button("Acesse o site oficial")
+#btn = st.button("Acesse o site oficial")
 
-if btn:
-    webbrowser.open_new_tab("https://www.cstng.com/")
+#if btn:
+webbrowser.open_new_tab("https://www.cstng.com/")
 
 # descrição projeto  #
 
