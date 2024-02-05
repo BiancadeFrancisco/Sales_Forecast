@@ -83,7 +83,7 @@ if st.sidebar.button("Prever"):
         )
 
         with open(
-            f".\\files\\best_parameters\\{LOJA}_{classe}_parameters.json"
+            f"./files/best_parameters/{LOJA}_{classe}_parameters.json"
         ) as file:
             relatorio = json.load(file)
 
