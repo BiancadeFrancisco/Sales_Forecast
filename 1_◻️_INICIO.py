@@ -6,11 +6,11 @@ from PIL import Image
 
 # Page Config
 
-img = Image.open(".\img\logo.png")
+img = Image.open("./img/logo.png")
 st.set_page_config(page_title="Solução Casting", page_icon=img, layout="wide")
 
 # inicio
-st.image(".\img\logo_completo.png")
+st.image("./img/logo_completo.png")
 st.write("\n\n")
 
 # site empresa #
