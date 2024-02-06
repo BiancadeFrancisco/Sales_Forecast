@@ -19,12 +19,12 @@ st.sidebar.write("\n\n")
 st.sidebar.write("\n\n")
 
 st.sidebar.markdown("SELEÇÃO DO CLIENTE:")
-LOJA = st.sidebar.selectbox("Selecione o cliente:", options=store_names)
+CLIENTE = st.sidebar.selectbox("Selecione o cliente:", options=store_names)
 
 # DADOS #
 
 try:
-    df = gerar_df(LOJA, classe)  # <- corrigir
+    df = gerar_df(CLIENTE, classe)  # <- corrigir
 
     st.sidebar.markdown("SELEÇÃO DE FILTROS:")
     fCategoria = st.sidebar.selectbox(
@@ -47,9 +47,9 @@ try:
     lista_datas = datas(fData[0], fData[1])
     # CONFIG PAGINA #
 
-    st.subheader("PREVISÃO FATURAMENTO POR CATEGORIA DE PRODUTO")
+    st.subheader("PREVISÃO FATURAMENTO POR LOJA")
 
-    st.subheader(LOJA)
+    st.subheader(CLIENTE)
 
     # MODELO #
     cat_list = [fCategoria for _ in range(len(lista_datas))]
@@ -62,7 +62,7 @@ except:
 
 try:
     with open(
-        f"./pages/skmodelos/predict_pipe_{LOJA}_{classe}.pkl", "rb"
+        f"./pages/skmodelos/predict_pipe_{CLIENTE}_{classe}.pkl", "rb"
     ) as MF:  # <- corrigir
         model = pkl.load(MF)
 except:
@@ -73,7 +73,7 @@ if st.sidebar.button("Prever"):
     try:
         tabela["VUF_DT"] = pd.to_datetime(tabela["VUF_DT"])
         previsoes = model.predict(tabela)
-        st.success("Previsão feita com sucesso", icon="✅")
+        st.success("Previsão feita com sucesso!", icon="✅")
         dados = {"Data": lista_datas, "Valor de venda": list(previsoes)}
         predict_forecasting_df = pd.DataFrame(dados)
         st.line_chart(
@@ -83,7 +83,7 @@ if st.sidebar.button("Prever"):
         )
 
         with open(
-            f"./files/best_parameters/{LOJA}_{classe}_parameters.json"
+            f"./files/best_parameters/{CLIENTE}_{classe}_parameters.json"
         ) as file:
             relatorio = json.load(file)
 
