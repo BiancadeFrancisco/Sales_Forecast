@@ -48,7 +48,8 @@ try:
     # CONFIG PAGINA #
 
     st.subheader("PREVISÃO FATURAMENTO POR LOJA")
-
+    st.write("\n\n")
+    st.write("Previsão referente ao cliente:")
     st.subheader(CLIENTE)
 
     # MODELO #
