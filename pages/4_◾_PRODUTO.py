@@ -67,7 +67,7 @@ try:
     with open(f"./pages/skmodelos/predict_pipe_{LOJA}_{classe}.pkl", "rb") as MF: #<- corrigir
         model = pkl.load(MF)
 except:
-    st.subheader('O cliente selecionado não possue modelo treinado',divider='red')
+    st.subheader('O cliente selecionado não possui modelo treinado',divider='red')
 
 if st.sidebar.button("Prever"):
 
