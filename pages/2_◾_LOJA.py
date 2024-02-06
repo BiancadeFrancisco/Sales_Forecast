@@ -73,7 +73,7 @@ if st.sidebar.button("Prever"):
     try:
         tabela["VUF_DT"] = pd.to_datetime(tabela["VUF_DT"])
         previsoes = model.predict(tabela)
-        st.success("Prevesão feita com sucesso", icon="✅")
+        st.success("Previsão feita com sucesso", icon="✅")
         dados = {"Data": lista_datas, "Valor de venda": list(previsoes)}
         predict_forecasting_df = pd.DataFrame(dados)
         st.line_chart(
