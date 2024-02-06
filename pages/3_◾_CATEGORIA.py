@@ -60,7 +60,7 @@ try:
 
     st.table(tabela)
 except:
-    st.subheader("A loja não possue base dados", divider="red")
+    st.subheader("O cliente não possui base dados", divider="red")
 
 try:
     with open(
@@ -68,7 +68,7 @@ try:
     ) as MF:  # <- corrigir
         model = pkl.load(MF)
 except:
-    st.subheader("A loja selecionada não possue modelo treinado", divider="red")
+    st.subheader("O cliente selecionado não possui modelo treinado", divider="red")
 
 if st.sidebar.button("Prever"):
 
