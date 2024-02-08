@@ -18,7 +18,7 @@ st.write("\n\n")
 #btn = st.button("Acesse o site oficial")  # botão para acessar site da empresa  -> Streamlit não interagiu com a biblioteca webbrowser
 
 #if btn:
-#    webbrowser.open_new_tab("https://www.cstng.com/") # biblioteca para acessar site
+#    webbrowser.open_new_tab("https://www.cstng.com/") # biblioteca para acessar site #
 
 # descrição projeto  #
 
