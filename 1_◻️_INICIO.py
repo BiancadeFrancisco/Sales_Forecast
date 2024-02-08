@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 import pickle as pkl
-import webbrowser
+#import webbrowser
 from PIL import Image
 
 # Page Config
@@ -15,10 +15,10 @@ st.write("\n\n")
 
 # site empresa #
 
-btn = st.button("Acesse o site oficial")  # botão para acessar site da empresa
+#btn = st.button("Acesse o site oficial")  # botão para acessar site da empresa  -> Streamlit não interagiu com a biblioteca webbrowser
 
-if btn:
-    webbrowser.open_new_tab("https://www.cstng.com/") # biblioteca para acessar site
+#if btn:
+#    webbrowser.open_new_tab("https://www.cstng.com/") # biblioteca para acessar site
 
 # descrição projeto  #
 
